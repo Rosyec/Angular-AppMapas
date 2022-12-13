@@ -1,0 +1,24 @@
+<div #mapa class="contenedorMapa"></div>
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col">
+            <div class="zoom">
+                <div class="content">
+                    <div class="range" id="range">
+                        <input type="range" class="form-range" id="myRange" #myRange [min]="minZoom" [max]="maxZoom" [value]="zoomLevel" (input)="onInputRange()">
+                    </div>
+                    <div class="boton" (click)="mostrarZoom = !mostrarZoom">
+                        <a class="fs-5"> <i class="bi bi-zoom-in"></i> </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="coordinates">
+            <h6 class="mt-1 text-primary" style="text-align: end;"> Longitud: {{ center[0] | number:'2.0-4' }} - Latitud: {{ center[1] | number:'2.0-4' }} </h6>
+        </div>
+    </div>
+
+    
+</div>
