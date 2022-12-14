@@ -2,6 +2,9 @@
 <div class="container-fluid">
 
     <div class="row">
+        <div class="coordinates">
+            <h6 class="mt-1 text-primary" style="text-align: end;"> Longitud: {{ center[0] | number:'2.0-4' }} - Latitud: {{ center[1] | number:'2.0-4' }} </h6>
+        </div>
         <div class="col">
             <div class="zoom">
                 <div class="content">
@@ -14,9 +17,6 @@
                 </div>
                 
             </div>
-        </div>
-        <div class="coordinates">
-            <h6 class="mt-1 text-primary" style="text-align: end;"> Longitud: {{ center[0] | number:'2.0-4' }} - Latitud: {{ center[1] | number:'2.0-4' }} </h6>
         </div>
     </div>
 

@@ -9,7 +9,7 @@ import * as mapboxgl from 'mapbox-gl';
 export class ZoomRangeComponent implements OnInit {
   mostrarZoom: boolean = false;
   mapa!: mapboxgl.Map;
-  zoomLevel: number = 3;
+  zoomLevel: number = 10;
   maxZoom: number = 20;
   minZoom: number = 3;
   center: [number, number] = [-74.06763555489785, 4.658158946861418];

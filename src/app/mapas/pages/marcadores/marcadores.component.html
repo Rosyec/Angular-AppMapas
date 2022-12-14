@@ -1,1 +1,38 @@
-<p>marcadores works!</p>
+<div #mapa class="contenedorMapa"></div>
+
+<div class="container-fluid">
+
+    <div class="row marcadores">
+        <div class="col">
+            <div class="marker">
+                <ul>
+                    <li class="my-1" *ngFor="let marcador of marcadores; let i = index">
+                        <div class="boton" (click)="irMarcador(marcador.marker!)" (dblclick)="borrarMarcador(i)">
+                            <a class="fs-5" [ngStyle]="{color: marcador.color}"> <i class="bi bi-geo-alt-fill"></i> </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="marker">
+                <div class="content">
+                    <div class="geo" id="geo">
+                        <a class="fs-3" id="myGeo" #myRange>
+                            <i class="bi bi-geo-alt-fill" (click)="agregarMarcador()"></i>
+                        </a>Agregar
+                    </div>
+                    <div class="boton" id="boton" (click)="mostrarGeo = !mostrarGeo">
+                        <a class="fs-1"> <i class="bi bi-plus"></i> </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+</div>
